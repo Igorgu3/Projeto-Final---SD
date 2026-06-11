@@ -45,5 +45,5 @@ architecture behavioral of gerador is
                         
         COM : comparador port map (a => reg_count, b => duty, maior => maior, menor => menor, igual => igual);
        
-        pwm <= '1' when menor = '1' else '0';
+        pwm <= '1' when enable = '1' and menor = '1' else '0';
 end behavioral;
